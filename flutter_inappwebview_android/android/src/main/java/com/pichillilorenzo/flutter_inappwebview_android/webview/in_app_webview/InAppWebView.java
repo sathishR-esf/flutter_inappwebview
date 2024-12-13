@@ -972,16 +972,16 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
     }
 
     if (newSettingsMap.get("allowContentAccess") != null && customSettings.allowContentAccess != newCustomSettings.allowContentAccess)
-      settings.setAllowContentAccess(newCustomSettings.allowContentAccess);
+      settings.setAllowContentAccess(false);
 
     if (newSettingsMap.get("allowFileAccess") != null && customSettings.allowFileAccess != newCustomSettings.allowFileAccess)
-      settings.setAllowFileAccess(newCustomSettings.allowFileAccess);
+      settings.setAllowFileAccess(false);
 
     if (newSettingsMap.get("allowFileAccessFromFileURLs") != null && customSettings.allowFileAccessFromFileURLs != newCustomSettings.allowFileAccessFromFileURLs)
-      settings.setAllowFileAccessFromFileURLs(newCustomSettings.allowFileAccessFromFileURLs);
+      settings.setAllowFileAccessFromFileURLs(false);
 
     if (newSettingsMap.get("allowUniversalAccessFromFileURLs") != null && customSettings.allowUniversalAccessFromFileURLs != newCustomSettings.allowUniversalAccessFromFileURLs)
-      settings.setAllowUniversalAccessFromFileURLs(newCustomSettings.allowUniversalAccessFromFileURLs);
+      settings.setAllowUniversalAccessFromFileURLs(false);
 
     if (newSettingsMap.get("cacheEnabled") != null && customSettings.cacheEnabled != newCustomSettings.cacheEnabled)
       setCacheEnabled(newCustomSettings.cacheEnabled);
