@@ -132,7 +132,7 @@ public class InAppBrowserActivity extends AppCompatActivity implements InAppBrow
     webSettings.setAllowUniversalAccessFromFileURLs(false); // Disable universal access via file URLs
     webSettings.setJavaScriptEnabled(false); // Disable JavaScript unless explicitly required
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-    webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+    // webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
     } else {
     // Fallback logic for older versions, if applicable
     }
