@@ -591,6 +591,15 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
         return false;
       }
     });
+
+    settings.setAllowFileAccess(false); // Disable file access
+    settings.setAllowContentAccess(false); // Disable content access
+    settings.setAllowFileAccessFromFileURLs(false); // Disable file access via file URLs
+    settings.setAllowUniversalAccessFromFileURLs(false); // Disable universal access via file URLs
+    settings.setJavaScriptEnabled(false); // Disable JavaScript by default
+    settings.setDomStorageEnabled(false); // Disable DOM Storage by default
+    settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW); // Block mixed content
+
   }
 
   public void prepareAndAddUserScripts() {
