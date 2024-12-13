@@ -357,10 +357,10 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && customSettings.mixedContentMode != null)
       settings.setMixedContentMode(customSettings.mixedContentMode);
 
-    settings.setAllowContentAccess(customSettings.allowContentAccess);
-    settings.setAllowFileAccess(customSettings.allowFileAccess);
-    settings.setAllowFileAccessFromFileURLs(customSettings.allowFileAccessFromFileURLs);
-    settings.setAllowUniversalAccessFromFileURLs(customSettings.allowUniversalAccessFromFileURLs);
+    settings.setAllowContentAccess(false);
+    settings.setAllowFileAccess(false);
+    settings.setAllowFileAccessFromFileURLs(false);
+    settings.setAllowUniversalAccessFromFileURLs(false);
     setCacheEnabled(customSettings.cacheEnabled);
     if (customSettings.appCachePath != null && !customSettings.appCachePath.isEmpty() && customSettings.cacheEnabled) {
       // removed from Android API 33+ (https://developer.android.com/sdk/api_diff/33/changes)
