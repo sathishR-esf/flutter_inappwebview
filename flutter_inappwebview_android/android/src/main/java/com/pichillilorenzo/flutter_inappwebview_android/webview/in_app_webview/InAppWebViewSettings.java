@@ -485,7 +485,8 @@ public class InAppWebViewSettings implements ISettings<InAppWebViewInterface> {
           alpha = (Double) value;
           break;
         case "useOnShowFileChooser":
-          useOnShowFileChooser = (Boolean) value;
+          // useOnShowFileChooser = (Boolean) value;
+          useOnShowFileChooser = false;
           break;
       }
     }
