@@ -138,7 +138,7 @@ public class InAppBrowserActivity extends AppCompatActivity implements InAppBrow
     }
    // webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW); // Block mixed content
     webSettings.setDomStorageEnabled(false); // Disable DOM storage by default
-    webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // Disable caching
+    // webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // Disable caching
     webView.setWebContentsDebuggingEnabled(false); // Disable debugging
 
     FindInteractionController findInteractionController = new FindInteractionController(webView, manager.plugin, id, null);
