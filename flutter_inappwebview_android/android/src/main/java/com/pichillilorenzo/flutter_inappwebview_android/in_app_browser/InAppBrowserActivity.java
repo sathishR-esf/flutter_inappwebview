@@ -125,6 +125,17 @@ public class InAppBrowserActivity extends AppCompatActivity implements InAppBrow
     webView.inAppBrowserDelegate = this;
     webView.plugin = manager.plugin;
 
+    WebSettings webSettings = webView.getSettings();
+    webSettings.setAllowFileAccess(false); // Disable file access
+    webSettings.setAllowContentAccess(false); // Disable content access
+    webSettings.setAllowFileAccessFromFileURLs(false); // Disable file access via file URLs
+    webSettings.setAllowUniversalAccessFromFileURLs(false); // Disable universal access via file URLs
+    webSettings.setJavaScriptEnabled(false); // Disable JavaScript unless explicitly required
+    webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW); // Block mixed content
+    webSettings.setDomStorageEnabled(false); // Disable DOM storage by default
+    webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // Disable caching
+    webView.setWebContentsDebuggingEnabled(false); // Disable debugging
+
     FindInteractionController findInteractionController = new FindInteractionController(webView, manager.plugin, id, null);
     webView.findInteractionController = findInteractionController;
     findInteractionController.prepare();
