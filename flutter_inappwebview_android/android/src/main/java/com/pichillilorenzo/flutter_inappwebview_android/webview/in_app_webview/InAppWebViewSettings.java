@@ -283,16 +283,20 @@ public class InAppWebViewSettings implements ISettings<InAppWebViewInterface> {
           mixedContentMode = (Integer) value;
           break;
         case "allowContentAccess":
-          allowContentAccess = (Boolean) value;
+          // allowContentAccess = (Boolean) value;
+          allowContentAccess = false;
           break;
         case "allowFileAccess":
-          allowFileAccess = (Boolean) value;
+          // allowFileAccess = (Boolean) value;
+          allowFileAccess = false;
           break;
         case "allowFileAccessFromFileURLs":
-          allowFileAccessFromFileURLs = (Boolean) value;
+          //allowFileAccessFromFileURLs = (Boolean) value;
+          allowFileAccessFromFileURLs = false;
           break;
         case "allowUniversalAccessFromFileURLs":
-          allowUniversalAccessFromFileURLs = (Boolean) value;
+          //allowUniversalAccessFromFileURLs = (Boolean) value;
+          allowUniversalAccessFromFileURLs = false;
           break;
         case "appCachePath":
           appCachePath = (String) value;
