@@ -131,7 +131,12 @@ public class InAppBrowserActivity extends AppCompatActivity implements InAppBrow
     webSettings.setAllowFileAccessFromFileURLs(false); // Disable file access via file URLs
     webSettings.setAllowUniversalAccessFromFileURLs(false); // Disable universal access via file URLs
     webSettings.setJavaScriptEnabled(false); // Disable JavaScript unless explicitly required
-    webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW); // Block mixed content
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+    webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+    } else {
+    // Fallback logic for older versions, if applicable
+    }
+   // webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW); // Block mixed content
     webSettings.setDomStorageEnabled(false); // Disable DOM storage by default
     webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // Disable caching
     webView.setWebContentsDebuggingEnabled(false); // Disable debugging
