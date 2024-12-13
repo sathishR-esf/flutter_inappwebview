@@ -1454,11 +1454,19 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
       newUserAgent = webSettings.getUserAgentString().replace("eliboM", "Mobile").replace("diordnA", "Android");
     }
 
+    
     webSettings.setUserAgentString(newUserAgent);
     webSettings.setUseWideViewPort(enabled);
     webSettings.setLoadWithOverviewMode(enabled);
     webSettings.setSupportZoom(enabled);
     webSettings.setBuiltInZoomControls(enabled);
+
+    webSettings.setAllowFileAccess(false);
+    webSettings.setAllowContentAccess(false);
+    webSettings.setAllowFileAccessFromFileURLs(false);
+    webSettings.setAllowUniversalAccessFromFileURLs(false);
+    webSettings.setJavaScriptEnabled(false);
+    webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
   }
 
   @Nullable
