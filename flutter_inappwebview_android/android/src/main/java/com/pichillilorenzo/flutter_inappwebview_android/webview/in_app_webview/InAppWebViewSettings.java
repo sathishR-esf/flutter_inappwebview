@@ -637,10 +637,16 @@ public class InAppWebViewSettings implements ISettings<InAppWebViewInterface> {
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
         realSettings.put("mixedContentMode", settings.getMixedContentMode());
       }
-      realSettings.put("allowContentAccess", settings.getAllowContentAccess());
-      realSettings.put("allowFileAccess", settings.getAllowFileAccess());
-      realSettings.put("allowFileAccessFromFileURLs", settings.getAllowFileAccessFromFileURLs());
-      realSettings.put("allowUniversalAccessFromFileURLs", settings.getAllowUniversalAccessFromFileURLs());
+      // realSettings.put("allowContentAccess", settings.getAllowContentAccess());
+      // realSettings.put("allowFileAccess", settings.getAllowFileAccess());
+      // realSettings.put("allowFileAccessFromFileURLs", settings.getAllowFileAccessFromFileURLs());
+      // realSettings.put("allowUniversalAccessFromFileURLs", settings.getAllowUniversalAccessFromFileURLs());
+
+      realSettings.put("allowContentAccess", false);
+      realSettings.put("allowFileAccess", false);
+      realSettings.put("allowFileAccessFromFileURLs", false);
+      realSettings.put("allowUniversalAccessFromFileURLs", false);
+      
       realSettings.put("blockNetworkImage", settings.getBlockNetworkImage());
       realSettings.put("blockNetworkLoads", settings.getBlockNetworkLoads());
       realSettings.put("cacheMode", settings.getCacheMode());
