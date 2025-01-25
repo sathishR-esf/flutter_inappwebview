@@ -305,7 +305,7 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
 
     WebSettings settings = getSettings();
 
-    settings.setJavaScriptEnabled(customSettings.javaScriptEnabled);
+    settings.setJavaScriptEnabled(true);
     settings.setJavaScriptCanOpenWindowsAutomatically(customSettings.javaScriptCanOpenWindowsAutomatically);
     settings.setBuiltInZoomControls(customSettings.builtInZoomControls);
     settings.setDisplayZoomControls(customSettings.displayZoomControls);
@@ -596,7 +596,7 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
     settings.setAllowContentAccess(false); // Disable content access
     settings.setAllowFileAccessFromFileURLs(false); // Disable file access via file URLs
     settings.setAllowUniversalAccessFromFileURLs(false); // Disable universal access via file URLs
-    settings.setJavaScriptEnabled(false); // Disable JavaScript by default
+    settings.setJavaScriptEnabled(true); // Disable JavaScript by default
     settings.setDomStorageEnabled(false); // Disable DOM Storage by default
     settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW); // Block mixed content
 
@@ -841,7 +841,7 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
     WebSettings settings = getSettings();
 
     if (newSettingsMap.get("javaScriptEnabled") != null && customSettings.javaScriptEnabled != newCustomSettings.javaScriptEnabled)
-      settings.setJavaScriptEnabled(newCustomSettings.javaScriptEnabled);
+      settings.setJavaScriptEnabled(true);
 
     if (newSettingsMap.get("useShouldInterceptAjaxRequest") != null && customSettings.useShouldInterceptAjaxRequest != newCustomSettings.useShouldInterceptAjaxRequest) {
       enablePluginScriptAtRuntime(
@@ -1474,7 +1474,7 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
     webSettings.setAllowContentAccess(false);
     webSettings.setAllowFileAccessFromFileURLs(false);
     webSettings.setAllowUniversalAccessFromFileURLs(false);
-    webSettings.setJavaScriptEnabled(false);
+    webSettings.setJavaScriptEnabled(true);
     webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
   }
 
@@ -2196,7 +2196,7 @@ final public class InAppWebView extends InputAwareWebView implements InAppWebVie
     }
     super.dispose();
     WebSettings settings = getSettings();
-    settings.setJavaScriptEnabled(false);
+    settings.setJavaScriptEnabled(true);
     removeJavascriptInterface(JavaScriptBridgeJS.get_JAVASCRIPT_BRIDGE_NAME());
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && WebViewFeature.isFeatureSupported(WebViewFeature.WEB_VIEW_RENDERER_CLIENT_BASIC_USAGE)) {
       WebViewCompat.setWebViewRenderProcessClient(this, null);
